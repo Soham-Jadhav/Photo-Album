@@ -1,0 +1,19 @@
+.basic-grid {
+    display: grid;
+    gap: 1rem;
+    /* background-color: aqua; */
+
+    /* too skinny, too much code */
+    /* 1fr = 100% */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+    /* cleaner code  */
+    /* grid-template-columns: repeat(12, 1fr); */
+
+    /* better sizing, but overflow */
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+
+    /* final - implicit grid - let algo figure the width */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+}
