@@ -4,7 +4,6 @@
     gap: 1rem;
 
     /* Explicit grid */
-    /* manually define rows & columns */
     grid-template-areas:
         'a b c d'
         'l ⭐ ⭐ e'
@@ -14,11 +13,9 @@
     grid-template-rows: repeat(4, 25%);
     grid-template-columns: 240px auto auto 240px;
 
-    /* delay var */
     --stagger-delay: 100ms;
 }
 
-/* move from one set of properties to another */
 @keyframes cardEntrance {
     from {
         opacity: 0;
@@ -36,7 +33,6 @@
 .card {
     background-color: rgba(36, 243, 147, 1);
     animation: cardEntrance 700ms ease-out;
-    /* set the elements 1st keyframe value ie. invisible */
     animation-fill-mode: backwards;
 }
 
